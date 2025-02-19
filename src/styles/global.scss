@@ -1,0 +1,52 @@
+@use "./variables.scss" as *;
+@import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  shape-rendering: geometricPrecision;
+  text-rendering: geometricPrecision;
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+}
+
+body {
+  font-family: Figtree;
+  height: 100vh;
+  background-color: $color-background-default;
+  display: grid;
+  grid-template-columns: repeat(11, 1fr);
+  grid-template-rows: 64px 1fr;
+}
+
+h1 {
+  color: $color-text-primary;
+}
+
+p {
+  color: $color-text-secondary;
+  font: $font-scale-paragraph-normal-m;
+}
+
+input {
+  background-color: $color-surface-subdued;
+  border: none;
+  border: $border-default-medium;
+  padding: $spacing-vertical-s $spacing-horizontal-m;
+  border-radius: $border-radius-container-s;
+  font: $font-scale-paragraph-normal-s;
+
+  &:focus {
+    outline: none;
+    border: $border-default-strong;
+  }
+
+  &::placeholder {
+    color: $color-text-disabled;
+  }
+}

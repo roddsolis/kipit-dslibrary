@@ -1,0 +1,10 @@
+@use "../variables.scss" as *;
+
+.MainContent {
+  width: 100%;
+  height: 100%;
+  padding: 4em;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}

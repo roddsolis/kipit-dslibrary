@@ -1,0 +1,9 @@
+@use "../variables.scss" as *;
+
+.NavigationDrawer {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-vertical-xs;
+  padding: $padding-l;
+  padding-top: $padding-3xl;
+}

@@ -1,0 +1,43 @@
+@use "../variables.scss" as *;
+
+.MenuItem-container {
+  display: flex;
+  flex-direction: column;
+  background-color: $color-surface-default;
+  border-radius: $border-radius-container-s;
+}
+
+.MenuItem-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: $color-surface-default;
+  padding: $padding-m;
+  border-radius: $border-radius-container-s;
+  color: $color-text-secondary;
+  font: $font-scale-button-l;
+  transition: 0.3s ease-in-out;
+}
+
+.MenuItem-header:focus-visible {
+  color: $color-text-primary-inverse;
+  background-color: $color-surface-brand;
+  transition: 0.3s ease-in-out;
+  // outline: none;
+}
+
+.MenuItem-content {
+  background-image: linear-gradient(
+    to top,
+    $color-surface-default,
+    $color-surface-subdued
+  );
+  display: flex;
+  flex-direction: column;
+  background-color: $color-surface-subdued;
+  border-radius: 0 0 $border-radius-container-m $border-radius-container-m;
+  gap: $spacing-vertical-m;
+  padding: $padding-l;
+  color: $color-text-primary;
+  font: $font-scale-paragraph-medium-l;
+}
