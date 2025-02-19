@@ -3,7 +3,6 @@
 .MenuItem-container {
   display: flex;
   flex-direction: column;
-  background-color: $color-surface-default;
   border-radius: $border-radius-container-s;
 }
 
@@ -13,9 +12,8 @@
   justify-content: space-between;
   background-color: $color-surface-default;
   padding: $padding-m;
-  border-radius: $border-radius-container-s;
   color: $color-text-secondary;
-  font: $font-scale-button-l;
+  font: $font-scale-button-m;
   transition: 0.3s ease-in-out;
 }
 
@@ -27,17 +25,12 @@
 }
 
 .MenuItem-content {
-  background-image: linear-gradient(
-    to top,
-    $color-surface-default,
-    $color-surface-subdued
-  );
   display: flex;
   flex-direction: column;
-  background-color: $color-surface-subdued;
-  border-radius: 0 0 $border-radius-container-m $border-radius-container-m;
   gap: $spacing-vertical-m;
   padding: $padding-l;
-  color: $color-text-primary;
-  font: $font-scale-paragraph-medium-l;
+  color: $color-text-secondary;
+  font: $font-scale-paragraph-medium-m;
+  border-left: $border-default-subdued;
+  margin-left: $spacing-horizontal-m;
 }
