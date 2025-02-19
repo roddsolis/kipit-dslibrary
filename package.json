@@ -2,10 +2,11 @@
   "name": "ds-next-library",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "scripts": {
-    "dev": "next dev --turbopack",
-    "build": "next build",
-    "start": "next start",
+    "dev": "node generateDynamicContent.js & next dev",
+    "build": "node generateDynamicContent.js && next build",
+    "start": "node generateDynamicContent.js & next start",
     "lint": "next lint",
     "build-tokens": "node splitTokens.js && node build-tokens.js"
   },
@@ -14,6 +15,7 @@
     "@mdx-js/react": "^3.1.0",
     "@next/mdx": "^15.1.7",
     "@types/mdx": "^2.0.13",
+    "chokidar": "^4.0.3",
     "gray-matter": "^4.0.3",
     "lucide-react": "^0.475.0",
     "next": "15.1.7",
