@@ -1,35 +1,37 @@
 "use client";
+// src/components/NavigationDrawer.jsx
 import React, { useEffect, useState } from "react";
 import MenuItem from "./MenuItem";
 import "../styles/components-styles/navigation-drawer-style.scss";
 
 const NavigationDrawer = () => {
-  const [menuData, setMenuData] = useState({});
+  const [menuData, setMenuData] = useState([]);
 
   useEffect(() => {
-    // Cargar dinámicamente los datos del menú
+    // Llama al archivo menuData.json ubicado en la carpeta public
     const fetchMenuData = async () => {
       try {
         const response = await fetch("/menuData.json");
+        if (!response.ok) throw new Error("No se pudo cargar menuData.json");
         const data = await response.json();
         setMenuData(data);
       } catch (error) {
-        console.error("Error al cargar el menú:", error);
+        console.error(error);
       }
     };
 
     fetchMenuData();
-  }, []);
+  }, []); // Solo se ejecuta una vez cuando el componente se monta
 
   return (
     <div className="NavigationDrawer">
-      {Object.entries(menuData).map(([category, files]) => (
+      {menuData.map((category, index) => (
         <MenuItem
-          key={category}
-          itemName={category} // Nombre de la carpeta como categoría
-          subItems={files.map((file) => ({
-            name: file.replace(".mdx", ""), // Nombre del archivo sin extensión
-            href: `/${category}/${file.replace(".mdx", "")}`, // Ruta dinámica
+          key={index}
+          itemName={category.categoryName}
+          subItems={category.subCategories.map((sub) => ({
+            name: sub.subCategoryName,
+            href: `/categories/${category.categoryName}/${sub.subCategoryName}`,
           }))}
         />
       ))}

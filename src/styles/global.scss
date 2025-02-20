@@ -17,11 +17,6 @@ li {
 
 body {
   font-family: Figtree;
-  height: 100vh;
-  background-color: $color-background-default;
-  display: grid;
-  grid-template-columns: repeat(11, 1fr);
-  grid-template-rows: 64px 1fr;
 }
 
 h1 {

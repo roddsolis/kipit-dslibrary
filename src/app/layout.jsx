@@ -15,9 +15,11 @@ const RootLayout = ({ children }) => {
   return (
     <html lang="es">
       <body>
-        <Header />
-        <NavigationDrawer />
-        <MainContent children={children} />
+        <div className="appContainer">
+          <Header />
+          <NavigationDrawer />
+          <MainContent children={children} />
+        </div>
       </body>
     </html>
   );

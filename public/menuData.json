@@ -1,0 +1,45 @@
+[
+  {
+    "categoryName": "componentes",
+    "subCategories": [
+      {
+        "subCategoryName": "alerts"
+      },
+      {
+        "subCategoryName": "botones"
+      },
+      {
+        "subCategoryName": "page"
+      }
+    ]
+  },
+  {
+    "categoryName": "design tokens",
+    "subCategories": [
+      {
+        "subCategoryName": "page"
+      },
+      {
+        "subCategoryName": "tokens"
+      }
+    ]
+  },
+  {
+    "categoryName": "foundations",
+    "subCategories": [
+      {
+        "subCategoryName": "colores"
+      },
+      {
+        "subCategoryName": "page"
+      },
+      {
+        "subCategoryName": "tipografia"
+      }
+    ]
+  },
+  {
+    "categoryName": "[...slug]",
+    "subCategories": []
+  }
+]

@@ -1,22 +1,30 @@
 @use "../variables.scss" as *;
 
+.appContainer {
+  display: grid;
+  grid-template-columns: repeat(11, 1fr);
+  grid-template-rows: 64px 1fr;
+  background-color: $color-background-default;
+  height: 100vh;
+}
+
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: $color-surface-default;
+  // background-color: $color-surface-default;
   padding: $padding-xl;
   grid-column: 1 / span 12;
   grid-template-rows: 1;
 }
 
 .NavigationDrawer {
-  background-color: $color-surface-default;
+  // background-color: $color-surface-default;
   grid-column: 1/3;
 }
 
 .MainContent {
-  background-color: $color-surface-subdued;
+  // background-color: $color-surface-subdued;
   border-radius: $border-radius-container-l 0 0 0;
   border: $border-default-subdued;
   grid-column: 3 / 12;

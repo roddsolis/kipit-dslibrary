@@ -4,9 +4,9 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "node generateDynamicContent.js & next dev",
+    "dev": "node generateDynamicContent.js && next dev",
     "build": "node generateDynamicContent.js && next build",
-    "start": "node generateDynamicContent.js & next start",
+    "start": "node generateDynamicContent.js && next start",
     "lint": "next lint",
     "build-tokens": "node splitTokens.js && node build-tokens.js"
   },
